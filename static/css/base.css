@@ -1,0 +1,284 @@
+:root {
+}
+
+.cursive{
+    font-family: cursive;
+}
+
+body{
+    background: url(/media/stones.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#title{
+    font-family: cursive;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding-top: 5px;
+    color: #6a7d82;
+    text-shadow: #889c9e 0px 0px 5px;
+    margin: 0.5rem 0;
+    letter-spacing: 1.5px;
+}
+
+.navbar {
+    background: #7fffd499;
+    border-bottom: 5px solid #ee81cb;
+    box-shadow: 0 0 5px white;
+}
+
+.dropdown-menu {
+    background: var(--almond);
+    box-shadow: 5px 5px var(--gunmetal);
+}
+
+.dropdown-item {
+    color: var(--gunmetal);
+    text-shadow: 0px 0px 5px var(--almond);
+    font-size: 1.2rem;
+}
+
+.dropdown-item:hover {
+    color: var(--almond);
+    background: var(--gunmetal);
+    text-shadow: 0px 0px 5px var(--almond);
+}
+
+#logo-nav {
+    background: aliceblue;
+    border: #2a7ac1 2px solid;
+    height: 60px;
+    width: 85px;
+    border-radius: 50%;
+    margin-bottom: 7px;
+}
+
+.navbar-collapse{
+    justify-content: flex-end;
+}
+
+.nav-link{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: var(--gunmetal);
+}
+
+.nav-link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    background: #a99c8c;
+}
+
+.logo{
+    padding: 0;
+}
+
+.no-bg {
+    background-color: unset;
+}
+
+.custom-container{
+    background: var(--almond);
+    width: 50vw;
+    padding: 20px;
+    margin-top: 20vh;
+    border: dotted 5px var(--gunmetal);
+}
+
+.custom-container a{
+    color: var(--gunmetal);
+}
+
+.custom-container div ul{
+    font-size: 1.5rem;
+    padding: 0;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.custom-button{
+    color: var(--gunmetal)!important;
+    border: solid var(--gunmetal) 3px;
+    border-radius: 10px;
+    background: aliceblue;
+    font-size: 1.3rem;
+    padding: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.custom-button:hover{
+    color: aliceblue!important;
+    border: solid aliceblue 3px;
+    border-radius: 10px;
+    background: var(--gunmetal);
+    text-decoration: none;
+}
+
+/*------------------animations*/
+
+.fade-in{
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 80%;
+    }
+}
+
+.look-at-me {
+    animation: look-at-me 3s infinite;
+    font-size: 1.5rem;
+}
+
+@keyframes look-at-me {
+    0% {
+        color: var(--queen-pink);
+        text-shadow: 0 0 5px var(--gunmetal);
+    }
+    25% {
+        color: var(--glaucous);
+        text-shadow: 0 0 5px var(--olivine);
+    }
+    50% {
+        color: var(--gunmetal);
+        text-shadow: 0 0 5px var(--gunmetal);
+    }
+    75% {
+        color: var(--olivine);
+        text-shadow: 0 0 5px var(--glaucous);
+    }
+    100% {
+        color: var(--queen-pink);
+        text-shadow: 0 0 5px var(--gunmetal);
+    }
+}
+
+@media (max-width: 1025px) {
+    #title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 792px) {
+    #title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 510px) {
+    #title {
+        font-size: 1.6rem;
+    }
+}
+
+/*------------------modal*/
+
+.modal {
+    margin-top: 20vh;
+}
+
+.modal-content {
+    color: var(--gunmetal);
+    background-color: var(--queen-pink);
+}
+
+.modal-footer a {
+    color: var(--gunmetal);
+}
+
+/*------------------allauth*/
+
+.allauth-card{
+    background: var(--almond);
+    height: 45vh;
+    width: 50vw;
+    padding: 20px;
+    margin: 20vh auto 0;
+    border: dotted 5px var(--gunmetal);
+    opacity: 80%;
+}
+
+.allauth-card form p label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* .allauth-card form button{
+    color: var(--gunmetal)!important;
+    border: 2px solid aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    background: aliceblue;
+    font-size: 1.3rem;
+    padding: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.allauth-card form button:hover{
+    color: aliceblue!important;
+    border: 2px solid var(--gunmetal);
+    background: var(--gunmetal);
+    text-decoration: none;
+} */
+
+#password-reset-button{
+    color: var(--gunmetal)!important;
+    border: 2px solid aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    background: aliceblue;
+    font-size: 1.3rem;
+    padding: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+#password-reset-button:hover{
+    color: aliceblue!important;
+    border: 2px solid var(--gunmetal);
+    background: var(--gunmetal);
+    text-decoration: none;
+}
+
+.big-bold{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#sign-out-card{
+    height: 18vh;
+}
+
+#sign-out-card p{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#sign-out-card form div{
+    align-items: baseline;
+}
+
+#sign-out-btn {
+    line-height: initial;
+}
+
+#password-reset-card{
+    height: 40vh;
+}
+
+#verify-card {
+    height: 20vh;
+}

@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    
+{% endblock %}
+
+{% block content %}
+    <div id="home-container" class="container custom-container fade-in">
+        <a href="#">
+            <h1 id="date" class="text-center"></h1>
+        </a>
+        <div>
+            <ul id="notes-info" class="d-flex">
+                <li>
+                    <a href="">
+                        Total Notes - {{ notes|length }}
+                    </a>
+                </li>
+                {% if urgent|length > 0 %}
+                    <li class="look-at-me">
+                        <a href="">
+                            Urgent Notes - {{ urgent|length }}
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        Urgent Notes - {{ urgent|length }}
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div>
+            <ul id="checkin-info" class="d-flex">
+                <li>
+                    <a href="">
+                        Total Bookings - {{ bookings|length }}
+                    </a>
+                </li>
+                {% if tday_bookings|length > 0 %}
+                    <li class="look-at-me">
+                        <a href="">
+                            Todays Check-Ins - {{ tday_bookings|length }}
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="">
+                            Todays Check-Ins - {{ tday_bookings|length }}
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div>
+            <ul id="home-list" class="d-flex">
+                {% if request.user.is_authenticated %}
+                    <li>
+                        <a class="custom-button" href="#">To-Do List</a>
+                    </li>     
+                    <li>
+                        <a class="custom-button" href="{% url 'account_logout' %}">Logout</a>
+                    </li>     
+                    <li>
+                        <a class="custom-button" href="mailto:cleaners@cleaners.com">E-mail Cleaners</a>
+                    </li>                
+                {% else %}
+                    <li>
+                        <a class="custom-button" id="login-button" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    <script src="{% static 'home/js/home.js' %}"></script>   
+{% endblock %}
